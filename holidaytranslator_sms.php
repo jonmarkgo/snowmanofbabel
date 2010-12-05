@@ -68,7 +68,10 @@
 		$message .= " Fact: ". $fact;
     }
 	$message .= " - ? for Help";
+	$message_split = str_split($message,160);
 ?>
 <Response>
+<?php foreach($message_split as $message) { ?>
     <Sms><?php echo $message; ?></Sms>
+<?php } ?>
 </Response>
