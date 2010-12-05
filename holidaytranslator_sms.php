@@ -1,5 +1,5 @@
 <?php
-	error_reporting(E_NONE);
+	error_reporting(E_ALL);
 	function normalize ($string) {
     $table = array(
         'Š'=>'S', 'š'=>'s', 'Đ'=>'Dj', 'đ'=>'dj', 'Ž'=>'Z', 'ž'=>'z', 'Č'=>'C', 'č'=>'c', 'Ć'=>'C', 'ć'=>'c',
@@ -50,7 +50,7 @@
 			default:
 				$translate_string = "Happy Holidays!";
 				$filename = "holiday_facts.txt";
-				break
+				break;
 		}
 		$translate_string = urlencode($translate_string);
 		$available_languages = parse_ini_file("languages.ini");
